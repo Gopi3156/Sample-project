@@ -1,0 +1,19 @@
+
+
+<!--parametrized pipe--> <!--And multiple pipes together-->
+<p> {{date | date: 'shortDate' | uppercase }}</p>
+<!--parametrized pipe with value from component-->
+<p> {{date | date : format }}</p>
+
+<!--two way binding and property binding-->
+<input type="text" [(ngModel)] = 'email'
+       [attr.placeholder] = "flag ? 'Email' : 'Password'"
+       [class.text-danger]="flag">
+
+<div class="glyphicon" [class.glyphicon-zoom-in]="!toggleFlag"> Zoom in</div>
+<div class="glyphicon" [class.glyphicon-zoom-out]="toggleFlag"> Zoom Out</div>
+
+<span class="glyphicon glyphicon-star"></span>
+
+<button type="button" (click)="toggle()">Click Me to Toggle Zoom in and out</button>
+
